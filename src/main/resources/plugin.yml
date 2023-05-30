@@ -1,0 +1,7 @@
+name: MyUtils
+version: '${version}'
+main: org.mmga.utils.MyUtils
+prefix: MMGAUtils
+load: STARTUP
+authors: [MakeMinecraftGreatAgainTeam]
+description: A Utils Libraries For Our Plugins
