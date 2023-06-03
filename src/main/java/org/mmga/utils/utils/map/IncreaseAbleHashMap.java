@@ -13,13 +13,13 @@ import java.util.function.Consumer;
 public class IncreaseAbleHashMap<K,V> extends HashMap<K, List<V>> implements IncreaseAbleMap<K,V> {
     @Override
     public void add(K key, V value) {
-        List<V> oldList = super.getOrDefault(value, new ArrayList<>());
+        List<V> oldList = super.getOrDefault(key, new ArrayList<>());
         oldList.add(value);
         super.put(key, oldList);
     }
     @Override
     public boolean delete(K key, V value){
-        List<V> oldList = super.getOrDefault(value, new ArrayList<>());
+        List<V> oldList = super.getOrDefault(key, new ArrayList<>());
         if (!oldList.remove(value)) {
             return false;
         }
